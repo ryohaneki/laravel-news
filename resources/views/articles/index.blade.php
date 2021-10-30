@@ -13,15 +13,15 @@
     <section>
         <h2>さぁ、最新のニュースをシェアしましょう</h2>
         @include('validate.validation')
-        <form action="{{ route('articles.store') }}" method="post">
+        <form action="{{ route('articles.store') }}" method="POST">
             @csrf
             <div>
                 <p>title</p>
-                <input type='text' name='title'>
+                <input type='text' name='title' value='タイトルを記入'>
             </div>
             <div>
                 <p>記事</p>
-                <textarea name="text"></textarea>
+                <textarea name="text"　value='記事を記入(３０文字以下)'></textarea>
             </div>
             <div>
                 <input type="submit" value="投稿">

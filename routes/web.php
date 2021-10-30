@@ -17,4 +17,4 @@ Route::get('/', "ArticleController@index");
 Route::post('/article_create', 'ArticleController@store')->name('articles.store');
 Route::get('/comment/{id}', 'ArticleController@show')->name('articles.show');
 Route::post('/comment_post', 'CommentController@store')->name('comments.store');
-Route::post('/comment_destroy', 'CommentController@destroy')->name('comments.destroy');
+Route::delete('/comment_destroy/{id}', 'CommentController@destroy')->name('comments.destroy');
