@@ -39,9 +39,7 @@ class ArticleController extends Controller
 
     public function show($articleid)
     {
-        
         $article = Article::find($articleid);
-        // dd($article);exit;
         $comments = $article->comments()->orderBy('created_at', 'desc')->get();
         return view('articles.comment', compact('article','comments'));
 
